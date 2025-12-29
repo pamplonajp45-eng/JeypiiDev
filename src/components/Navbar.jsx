@@ -24,16 +24,6 @@ const Navbar = () => {
           </a>
         </li>
         <li>
-          <a href="#about" onClick={(e) => handleClick(e, "about")}>
-            Who's JeypiiDev?
-          </a>
-        </li>
-        <li>
-          <a href="#portfolio" onClick={(e) => handleClick(e, "portfolio")}>
-            Projects
-          </a>
-        </li>
-        <li>
           <a href="#experience" onClick={(e) => handleClick(e, "experience")}>
             Exp.
           </a>

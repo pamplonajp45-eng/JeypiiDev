@@ -36,12 +36,13 @@
 
 .greeting {
   color: #e2e8f0;
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin: 0;
   opacity: 0.9;
+  text-align: justify;
 }
 
 .home-title {
@@ -50,6 +51,7 @@
   color: white;
   line-height: 1.1;
   margin: 0;
+  text-align: justify;
 }
 
 .gradient-text {
@@ -61,12 +63,12 @@
 }
 
 .home-description {
-  font-size: 1.125rem;
+  font-size: clamp(1rem, 2.5vw, 1.125rem);
   color: #e2e8f0;
   line-height: 1.7;
   margin: 0;
   max-width: 540px;
-  text-align: center;
+  text-align: justify;
 }
 
 .highlight {
@@ -217,7 +219,7 @@
 
   .home-content {
     order: 2;
-    text-align: center;
+    text-align: justify;
     align-items: center;
   }
 

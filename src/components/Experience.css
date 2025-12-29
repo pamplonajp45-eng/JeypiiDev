@@ -1,0 +1,258 @@
+/* Experience.css */
+
+.experience-section {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding: 6rem 2rem;
+  position: relative;
+}
+
+.experience-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.experience-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.experience-title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.02em;
+}
+
+.experience-subtitle {
+  font-size: 1.125rem;
+  color: #64748b;
+  margin: 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.experience-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.experience-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.04);
+  border-color: #cbd5e1;
+}
+
+.card-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: #e2e8f0;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.experience-card:hover .card-image {
+  transform: scale(1.1);
+}
+
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.experience-card:hover .card-overlay {
+  opacity: 1;
+}
+
+.card-content {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.experience-card:hover .card-title {
+  color: #6366f1;
+}
+
+.card-subtitle {
+  font-size: 0.9375rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  letter-spacing: 0.02em;
+}
+
+.experience-card:hover .tag {
+  background: #e0e7ff;
+  color: #6366f1;
+}
+
+.card-arrow {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  opacity: 0;
+  transform: translate(5px, -5px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.experience-card:hover .card-arrow {
+  opacity: 1;
+  transform: translate(0, 0);
+  color: #6366f1;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .experience-section {
+    padding: 5rem 1.5rem;
+  }
+
+  .experience-title {
+    font-size: 2.25rem;
+  }
+
+  .experience-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .experience-section {
+    padding: 4rem 1rem;
+  }
+
+  .experience-header {
+    margin-bottom: 3rem;
+  }
+
+  .experience-title {
+    font-size: 2rem;
+  }
+
+  .experience-subtitle {
+    font-size: 1rem;
+  }
+
+  .experience-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .card-image-wrapper {
+    height: 180px;
+  }
+
+  .card-content {
+    padding: 1.25rem;
+  }
+
+  .card-title {
+    font-size: 1.125rem;
+  }
+}
+
+/* Loading animation for images */
+@keyframes shimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+.card-image-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    #e2e8f0 0%,
+    #f1f5f9 20%,
+    #e2e8f0 40%,
+    #e2e8f0 100%
+  );
+  background-size: 800px 100%;
+  animation: shimmer 1.5s linear infinite;
+  z-index: 1;
+}
+
+.card-image-wrapper img {
+  position: relative;
+  z-index: 2;
+}

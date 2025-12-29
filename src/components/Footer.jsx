@@ -1,5 +1,12 @@
 import "./Footer.css";
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaGithub } from "react-icons/fa";
+import {
+  FaPhone,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaGithub,
+  FaFacebook,
+  FaInstagram,
+} from "react-icons/fa";
 
 export default function Footer() {
   const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=devjp35@gmail.com&su=${encodeURIComponent(
@@ -29,16 +36,7 @@ export default function Footer() {
               <a href="#home">Home</a>
             </li>
             <li>
-              <a href="#materials">About</a>
-            </li>
-            <li>
               <a href="#products">Experience</a>
-            </li>
-            <li>
-              <a href="#gallery">Portfolio</a>
-            </li>
-            <li>
-              <a href="#faqs">Contact</a>
             </li>
           </ul>
         </div>
@@ -70,14 +68,27 @@ export default function Footer() {
               href="https://github.com/pamplonajp45-eng"
               target="_blank"
               rel="noreferrer"
-              aria-label="Facebook"
+              aria-label="Github"
             >
               <FaGithub />
             </a>
+            <a
+              href="https://www.facebook.com/jordanpamplonaNIGHTMARE05/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Facebook"
+            >
+              <FaFacebook />
+            </a>
+            <a
+              href="https://www.instagram.com/jeypii_dev/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram"
+            >
+              <FaInstagram />
+            </a>
           </div>
-          <p className="footer-social-text">
-            Stay updated with our latest projects and innovations!
-          </p>
         </div>
       </div>
 

@@ -6,14 +6,17 @@ const Home = () => (
       <div className="home-grid">
         <div className="home-content">
           <div className="home-intro">
-            <p className="greeting">What's up!</p>
-            <h1 className="home-title">Jordan Pamplona</h1>
+            <p className="greeting">Hey!, I'm</p>
+            <h1 className="home-title">Jordan O. Pamplona</h1>
           </div>
-
           <p className="home-description">
-            Full-Stack developer who loves building clean, responsive, and
-            user-friendly web applications that turn ideas
-            <span className="highlight"> into reality.</span>
+            I don’t just build websites and apps that make people go,{" "}
+            <i>“Wait — how’d they do that?”.</i> I craft digital experiences
+            that stick. I’m a{" "}
+            <span className="highlight">MERN full-stack developer </span>
+            with a passion for clean code, seamless interactions, and making the
+            impossible
+            <span className="highlight"> feel effortless.</span>
           </p>
         </div>
 
