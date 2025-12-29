@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #414359;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+}
+nav li {
+  padding-left: 1rem;
+}
+.navbar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
