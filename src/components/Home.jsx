@@ -13,7 +13,7 @@ const Home = () => (
             I don’t just build websites and apps that make people go,{" "}
             <i>“Wait — how’d they do that?”.</i> I craft digital experiences
             that stick. I’m a{" "}
-            <span className="highlight">MERN full-stack developer </span>
+            <span className="highlight">MERN full-stack developer</span>
             with a passion for clean code, seamless interactions, and making the
             impossible
             <span className="highlight"> feel effortless.</span>
@@ -24,7 +24,7 @@ const Home = () => (
           <div className="image-wrapper">
             <div className="image-glow"></div>
             <img
-              src="../profile.jpg"
+              src="profile.jpg"
               alt="Jordan Pamplona"
               className="profile-image"
             />

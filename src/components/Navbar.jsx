@@ -1,4 +1,3 @@
-import React from "react";
 import "./Navbar.css";
 
 /**
@@ -29,7 +28,7 @@ const Navbar = () => {
           </a>
         </li>
         <li>
-          <a href="#contact" onClick={(e) => handleClick(e, "contact")}>
+          <a href="#contact" onClick={(e) => handleClick(e, "footer")}>
             Contact Me
           </a>
         </li>
