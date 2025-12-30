@@ -10,5 +10,6 @@ export default defineConfig({
       },
     }),
   ],
-  base: "/",
+  // Use "/" for Vercel, "/JeypiiDev/" for GitHub Pages
+  base: process.env.VERCEL ? "/" : "/JeypiiDev/",
 });
