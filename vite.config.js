@@ -10,5 +10,5 @@ export default defineConfig({
       },
     }),
   ],
-  base: "/jeypiidev_portfolio/",
+  base: "/",
 });
