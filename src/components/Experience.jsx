@@ -31,7 +31,7 @@ export default function Experience() {
       subtitle:
         'LUNO is a modern, minimalist companion for your wellness journey. "Luna" (moon), symbolizing guidance, cycles, and care. It’s designed to be a gentle, brandable, and user-friendly reminder app that feels like a wellness companion rather than just a tool.',
       image: "images/luno.png",
-      link: "https://luno-pillreminder-5sywfzzff-jpdevs-projects-a9cf3dc2.vercel.app/",
+      link: "https://luno-pillreminderapp.vercel.app/",
       tags: ["API", "React", "Node.js", "Reminder", "Local Storage", "PWA"],
     },
     {
