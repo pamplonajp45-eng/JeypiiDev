@@ -24,7 +24,7 @@ const Home = () => (
           <div className="image-wrapper">
             <div className="image-glow"></div>
             <img
-              src="profile.jpg"
+              src="profile2.png"
               alt="Jordan Pamplona"
               className="profile-image"
             />
