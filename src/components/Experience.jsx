@@ -22,7 +22,7 @@ export default function Experience() {
       title: "Habit Tracker",
       subtitle: "Track your habits and routines effectively",
       image: "images/habit.png",
-      link: "https://pamplonajp45-eng.github.io/jpdev-habit-tracker/",
+      link: "https://jpdev-habit-tracker.vercel.app/",
       tags: ["React", "Tasks", "Planning", "Local Storage", "PWA"],
     },
     {
