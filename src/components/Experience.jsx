@@ -1,6 +1,8 @@
 import "./Experience.css";
+import { useState } from "react";
 
 export default function Experience() {
+  const [loadedIds, setLoadedIds] = useState(new Set());
   const projects = [
     {
       id: 1,
@@ -47,11 +49,28 @@ export default function Experience() {
       title: "JP-FUSION LAB",
       subtitle: " A website for my brother's 3D printing business",
       image: "images/jpfusionlab.png",
+      link: "https://jp-fusion-lab.vercel.app/",
       tags: [
         "CRUD",
         "API",
         "MONGODB ATLAS",
         "Express.js",
+        "React.js",
+        "Node.js",
+      ],
+    },
+    {
+      id: 6,
+      title: "jp DECK",
+      subtitle:
+        " A nihongo flashcard app for language learners w/ A.I integration and superMemo2 algorithm",
+      image: "images/jpdeck.png",
+      link: "https://jpdev-flash-cards.vercel.app/",
+      tags: [
+        "API",
+        "Supabase",
+        "JavaScript",
+        "Gemini API",
         "React.js",
         "Node.js",
       ],
@@ -78,10 +97,18 @@ export default function Experience() {
               className="experience-card"
             >
               <div className="card-image-wrapper">
+                {!loadedIds.has(project.id) && <div className="shimmer" />}
                 <img
                   src={project.image}
                   alt={project.title}
                   className="card-image"
+                  onLoad={() =>
+                    setLoadedIds((prev) => new Set([...prev, project.id]))
+                  }
+                  onError={(e) => {
+                    e.target.style.opacity = "0";
+                    setLoadedIds((prev) => new Set([...prev, project.id]));
+                  }}
                 />
                 <div className="card-overlay"></div>
               </div>
