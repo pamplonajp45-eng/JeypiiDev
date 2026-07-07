@@ -5,6 +5,22 @@ export default function Experience() {
   const [loadedIds, setLoadedIds] = useState(new Set());
   const projects = [
     {
+      id: 6,
+      title: "jp DECK",
+      subtitle:
+        " A nihongo flashcard app for language learners w/ A.I integration and superMemo2 algorithm",
+      image: "images/jpdeck.png",
+      link: "https://jpdev-flash-cards.vercel.app/",
+      tags: [
+        "API",
+        "Supabase",
+        "JavaScript",
+        "Gemini API",
+        "React.js",
+        "Node.js",
+      ],
+    },
+    {
       id: 1,
       title: "Productivity Timer",
       subtitle: "Pomodoro Technique",
@@ -55,22 +71,6 @@ export default function Experience() {
         "API",
         "MONGODB ATLAS",
         "Express.js",
-        "React.js",
-        "Node.js",
-      ],
-    },
-    {
-      id: 6,
-      title: "jp DECK",
-      subtitle:
-        " A nihongo flashcard app for language learners w/ A.I integration and superMemo2 algorithm",
-      image: "images/jpdeck.png",
-      link: "https://jpdev-flash-cards.vercel.app/",
-      tags: [
-        "API",
-        "Supabase",
-        "JavaScript",
-        "Gemini API",
         "React.js",
         "Node.js",
       ],

@@ -1,8 +1,9 @@
 /* Footer Styles */
 .footer {
   position: relative;
+  width: 100%;
+  overflow: hidden;
   background-color: #414359;
-  /* Keep it very dark for contrast */
   color: #f5f5f5;
   padding: 80px 20px 30px;
   margin-top: auto;
