@@ -7,7 +7,15 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 0.85rem 2rem;
-  background-color: #414359;
+  background: linear-gradient(
+    180deg,
+    rgba(74, 47, 24, 0.98),
+    rgba(36, 21, 9, 0.98)
+  );
+  border-bottom: 3px solid #8a6a24;
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.6),
+    0 8px 24px rgba(0, 0, 0, 0.65);
   position: fixed;
   top: 0;
   left: 0;
@@ -33,14 +41,23 @@ nav li {
 nav a {
   white-space: nowrap;
   font-size: 0.95rem;
+  color: #c9b287;
+  transition: color 300ms ease;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #ffd868;
 }
 
 .navbar-title {
   font-size: 1.4rem;
   font-weight: bold;
-  color: #ffffff;
+  color: #ffd868;
+  text-shadow: 0 0 8px rgba(255, 216, 104, 0.5);
   white-space: nowrap;
   flex-shrink: 0;
+  font-family: "VT323", monospace;
 }
 
 /* ── Mobile ─────────────────────────────────────── */

@@ -3,11 +3,22 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-  background-color: #414359;
-  color: #f5f5f5;
+  background:
+    radial-gradient(ellipse at top, rgba(0, 0, 0, 0.15), transparent 60%),
+    repeating-linear-gradient(
+      90deg,
+      #3d2714 0px,
+      #3d2714 18px,
+      #5a3a1e 18px,
+      #5a3a1e 20px
+    ),
+    linear-gradient(180deg, #241509, #3d2714);
+  color: #e8d5ac;
   padding: 80px 20px 30px;
   margin-top: auto;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 3px solid #8a6a24;
+  box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.65);
+  font-family: "VT323", monospace;
 }
 
 .footer-content {
@@ -21,32 +32,34 @@
 
 /* Footer Sections */
 .footer-section h3 {
-  color: #ffffff;
-  font-family: var(--font-heading);
+  color: #ffd868;
+  font-family: "VT323", monospace;
   font-size: 1.5rem;
   margin-bottom: 20px;
   font-weight: 700;
-  letter-spacing: -0.5px;
+  text-shadow: 0 0 8px rgba(255, 216, 104, 0.5);
+  letter-spacing: 1px;
 }
 
 .footer-section h4 {
-  color: #ffffff;
+  color: #ffd868;
   font-size: 1.1rem;
   margin-bottom: 24px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
+  text-shadow: 0 0 6px rgba(255, 216, 104, 0.3);
 }
 
 .footer-tagline {
-  color: rgba(255, 255, 255, 0.7);
+  color: #c9b287;
   font-style: italic;
   margin-bottom: 20px;
   font-size: 1rem;
 }
 
 .footer-description {
-  color: rgba(255, 255, 255, 0.5);
+  color: #c9b287;
   line-height: 1.7;
   font-size: 0.95rem;
   text-align: justify;
@@ -64,7 +77,7 @@
 }
 
 .footer-links a {
-  color: rgba(255, 255, 255, 0.7);
+  color: #c9b287;
   text-decoration: none;
   transition: all 0.2s ease;
   font-size: 0.95rem;
@@ -72,8 +85,9 @@
 }
 
 .footer-links a:hover {
-  color: var(--primary);
+  color: #ffd868;
   transform: translateX(5px);
+  text-shadow: 0 0 6px rgba(255, 216, 104, 0.5);
 }
 
 /* Contact Info */
@@ -87,29 +101,29 @@
   display: flex;
   align-items: center;
   margin-bottom: 18px;
-  color: rgba(255, 255, 255, 0.7);
+  color: #c9b287;
   font-size: 0.95rem;
 }
 
 .footer-icon {
-  color: var(--primary);
+  color: #e6b93d;
   margin-right: 15px;
   font-size: 1.1rem;
   flex-shrink: 0;
 }
 
 .footer-contact a {
-  color: rgba(255, 255, 255, 0.7);
+  color: #c9b287;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .footer-contact a:hover {
-  color: var(--primary);
+  color: #ffd868;
 }
 
 .footer-contact span {
-  color: rgba(255, 255, 255, 0.7);
+  color: #c9b287;
 }
 
 /* Social Media */
@@ -122,35 +136,37 @@
 .footer-socials a {
   width: 48px;
   height: 48px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
+  background: linear-gradient(
+    180deg,
+    rgba(90, 58, 30, 0.55),
+    rgba(36, 21, 9, 0.55)
+  );
+  border: 2px solid rgba(230, 185, 61, 0.25);
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
+  color: #c9b287;
   font-size: 1.2rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
 }
 
 .footer-socials a:hover {
-  background: var(--primary);
-  border-color: var(--primary);
-  color: white;
+  background: linear-gradient(
+    180deg,
+    rgba(122, 84, 24, 0.55),
+    rgba(36, 21, 9, 0.65)
+  );
+  border-color: #e6b93d;
+  color: #ffd868;
   transform: translateY(-4px);
-  box-shadow: 0 5px 15px rgba(183, 86, 54, 0.4);
-}
-
-.footer-social-text {
-  color: rgba(255, 255, 255, 0.4);
-  font-size: 0.9rem;
-  line-height: 1.5;
+  box-shadow: 0 0 10px rgba(230, 185, 61, 0.55);
 }
 
 /* Footer Bottom */
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 2px solid rgba(230, 185, 61, 0.2);
   padding-top: 30px;
   position: relative;
   display: flex;
@@ -161,22 +177,10 @@
 }
 
 .footer-bottom p {
-  color: rgba(255, 255, 255, 0.3);
+  color: #c9b287;
   font-size: 0.875rem;
   margin: 0;
-}
-
-.admin-link {
-  color: rgba(255, 255, 255, 0.1);
-  /* Very subtle */
-  font-size: 0.75rem;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.admin-link:hover {
-  color: var(--primary);
-  opacity: 1;
+  opacity: 0.6;
 }
 
 /* Responsive Design */

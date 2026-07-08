@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
+import TechStack from "./components/TechStack";
 import Experience from "./components/Experience";
 import "./App.css";
 import Footer from "./components/Footer";
@@ -14,6 +15,7 @@ function App() {
       <Navbar />
       <main>
         <Home />
+        <TechStack />
         <Experience />
       </main>
       <Footer />
