@@ -13,7 +13,6 @@ const Home = () => (
         {/* Left: Text Content */}
         <div className="home-content">
           <div className="home-intro">
-            <span className="greeting-badge">👋 Hey, I&apos;m</span>
             <h1 className="home-title">Jordan O.</h1>
             <h1 className="home-title-surname">Pamplona</h1>
             <div className="role-pill">

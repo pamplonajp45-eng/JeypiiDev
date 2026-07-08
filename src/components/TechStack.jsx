@@ -39,8 +39,8 @@ const TECHS = {
       description:
         "The bedrock rune etched into every project — the skeleton every other spell is cast upon.",
       experience: "2 Years",
-      mastery: 5,
-      projects: "30+",
+      mastery: 3.5,
+      projects: "7",
     },
     {
       id: "css3",
@@ -50,8 +50,8 @@ const TECHS = {
       description:
         "A styling enchantment that clothes the raw bones of HTML in visual splendor.",
       experience: "2 Years",
-      mastery: 5,
-      projects: "30+",
+      mastery: 3.5,
+      projects: "7",
     },
     {
       id: "javascript",
@@ -61,8 +61,8 @@ const TECHS = {
       description:
         "The arcane force animating the web — summoning logic and behavior out of nothing.",
       experience: "1 Year",
-      mastery: 5,
-      projects: "25+",
+      mastery: 3.5,
+      projects: "7",
     },
     {
       id: "php",
@@ -83,7 +83,7 @@ const TECHS = {
       description:
         "The query-tongue for commanding data spirits bound within a database's vault.",
       experience: "2+ Years",
-      mastery: 3,
+      mastery: 3.5,
       projects: "10+",
     },
   ],
@@ -119,7 +119,7 @@ const TECHS = {
       description:
         "Utility runes stacked together to conjure styles without ever leaving the scroll.",
       experience: "6 Months",
-      mastery: 5,
+      mastery: 3,
       projects: "12+",
     },
     {
@@ -461,10 +461,15 @@ function CornerOrnaments() {
 
 function Stars({ count }) {
   const total = 5;
+  const fullStars = Math.floor(count);
+  const halfStar = count - fullStars >= 0.5;
+  const emptyStars = total - fullStars - (halfStar ? 1 : 0);
+
   return (
     <span className="rpg-stars rpg-pixel-font" style={{ fontSize: "11px" }}>
-      {"★".repeat(count)}
-      <span style={{ opacity: 0.25 }}>{"★".repeat(total - count)}</span>
+      {"★".repeat(fullStars)}
+      {halfStar && <span className="rpg-star-half">★</span>}
+      <span style={{ opacity: 0.25 }}>{"★".repeat(emptyStars)}</span>
     </span>
   );
 }
@@ -509,7 +514,7 @@ export default function DeveloperInventory() {
 
   return (
     <section id="techstack" className="rpg-section">
-      <div className="rpg-vignette" />
+      <div id="TechStack" className="rpg-vignette" />
       <div className="rpg-layout">
         {/* ================= LEFT — Sidebar ================= */}
         <div className="rpg-sidebar">
@@ -646,10 +651,7 @@ export default function DeveloperInventory() {
                   <div
                     className="rpg-stat-row"
                     style={{ borderBottom: "none" }}
-                  >
-                    <span>Projects</span>
-                    <span>{selectedTech.projects}</span>
-                  </div>
+                  ></div>
                 </div>
               </motion.div>
             ) : (

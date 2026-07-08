@@ -23,6 +23,11 @@ const Navbar = () => {
           </a>
         </li>
         <li>
+          <a href="#TechStack" onClick={(e) => handleClick(e, "TechStack")}>
+            Tech Stack
+          </a>
+        </li>
+        <li>
           <a href="#experience" onClick={(e) => handleClick(e, "experience")}>
             Exp.
           </a>
