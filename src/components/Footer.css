@@ -4,6 +4,7 @@
   width: 100%;
   overflow: hidden;
   background:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
     radial-gradient(ellipse at top, rgba(0, 0, 0, 0.15), transparent 60%),
     repeating-linear-gradient(
       90deg,

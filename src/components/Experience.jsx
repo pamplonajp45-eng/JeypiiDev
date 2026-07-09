@@ -3,6 +3,8 @@ import { useState } from "react";
 
 export default function Experience() {
   const [loadedIds, setLoadedIds] = useState(new Set());
+  const [noLinkProject, setNoLinkProject] = useState(null);
+
   const projects = [
     {
       id: 6,
@@ -77,6 +79,13 @@ export default function Experience() {
     },
   ];
 
+  const handleCardClick = (e, project) => {
+    if (project.id === 4 || project.id === 5) {
+      e.preventDefault();
+      setNoLinkProject(project);
+    }
+  };
+
   return (
     <section id="experience" className="experience-section">
       <div className="experience-container">
@@ -95,6 +104,7 @@ export default function Experience() {
               target="_blank"
               rel="noopener noreferrer"
               className="experience-card"
+              onClick={(e) => handleCardClick(e, project)}
             >
               <div className="card-image-wrapper">
                 {!loadedIds.has(project.id) && <div className="shimmer" />}
@@ -141,6 +151,39 @@ export default function Experience() {
           ))}
         </div>
       </div>
+
+      {noLinkProject && (
+        <div
+          className="no-link-modal-overlay"
+          onClick={() => setNoLinkProject(null)}
+        >
+          <div
+            className="no-link-modal-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="no-link-modal-header">
+              <span className="no-link-modal-dot"></span>
+              <h3>NOT ACTIVE</h3>
+            </div>
+            <div className="no-link-modal-body">
+              <p>
+                The live demo for <strong>{noLinkProject.title}</strong> is
+                currently offline.
+              </p>
+              <p className="no-link-modal-hint">
+                This project may be undergoing server maintenance or
+                self-hosting migrations.
+              </p>
+            </div>
+            <button
+              className="no-link-modal-btn"
+              onClick={() => setNoLinkProject(null)}
+            >
+              Acknowledge
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

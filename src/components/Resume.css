@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap");
+
+/* ── Modal Overlay ─────────────────────────────────────── */
+.resume-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 6, 3, 0.88);
+  backdrop-filter: blur(6px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  animation: modalFadeIn 0.3s ease both;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ── Modal Content ─────────────────────────────────────── */
+.resume-modal-content {
+  position: relative;
+  width: 95%;
+  max-width: 1100px;
+  height: 94vh;
+  max-height: 94vh;
+  background:
+    radial-gradient(ellipse at top, rgba(0, 0, 0, 0.15), transparent 60%),
+    repeating-linear-gradient(
+      90deg,
+      #3d2714 0px,
+      #3d2714 18px,
+      #5a3a1e 18px,
+      #5a3a1e 20px
+    ),
+    linear-gradient(180deg, #241509, #3d2714);
+  border: 3px solid #e6b93d;
+  border-radius: 12px;
+  box-shadow:
+    0 0 40px rgba(230, 185, 61, 0.25),
+    0 25px 50px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: modalSlideUp 0.35s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+@keyframes modalSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ── Close Button ──────────────────────────────────────── */
+.resume-close-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 40px;
+  height: 40px;
+  background: rgba(36, 21, 9, 0.9);
+  border: 2px solid #e6b93d;
+  border-radius: 8px;
+  color: #c9b287;
+  font-size: 1.6rem;
+  font-family: "VT323", monospace;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+  z-index: 10;
+}
+
+.resume-close-btn:hover {
+  background: rgba(122, 84, 24, 0.55);
+  color: #ffd868;
+  border-color: #ffd868;
+  transform: scale(1.1);
+}
+
+/* ── Resume Header ─────────────────────────────────────── */
+.resume-header {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 2px solid rgba(230, 185, 61, 0.35);
+  background: rgba(74, 47, 24, 0.92);
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding-right: 4.5rem; /* Space for absolute close button */
+}
+
+.resume-title {
+  font-family: "VT323", monospace;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 700;
+  color: #ffd868;
+  text-shadow:
+    0 0 8px rgba(255, 216, 104, 0.5),
+    2px 2px 0 rgba(0, 0, 0, 0.6);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.resume-subtitle {
+  font-family: "VT323", monospace;
+  font-size: 1.1rem;
+  color: #c9b287;
+  margin: 0.35rem 0 0;
+}
+
+/* ── Resume Action Button ─────────────────────────────── */
+.resume-action-btn {
+  font-family: "VT323", monospace;
+  font-size: 1.1rem;
+  color: #ffd868;
+  background: rgba(36, 21, 9, 0.9);
+  border: 2px solid #e6b93d;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resume-action-btn:hover {
+  background: rgba(122, 84, 24, 0.55);
+  color: #ffd868;
+  border-color: #ffd868;
+  transform: scale(1.05);
+}
+
+/* ── Resume Iframe & Container ────────────────────────── */
+.resume-iframe-container {
+  width: 100%;
+  flex: 1;
+  overflow: auto;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  -webkit-overflow-scrolling: touch;
+}
+
+.resume-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  flex: 1;
+}
+
+/* ── Responsive ────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .resume-modal-content {
+    max-width: 95vw;
+    height: 92vh;
+    max-height: 92vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .resume-modal-overlay {
+    padding: 0.5rem;
+  }
+
+  .resume-modal-content {
+    height: 95vh;
+    max-height: 95vh;
+    border-radius: 10px;
+    border-width: 2px;
+  }
+
+  .resume-header {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding-right: 3.5rem;
+  }
+
+  .resume-action-btn {
+    font-size: 0.95rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .resume-close-btn {
+    top: 0.35rem;
+    right: 0.35rem;
+    width: 34px;
+    height: 34px;
+    font-size: 1.3rem;
+  }
+
+  .resume-title {
+    font-size: 1.4rem;
+  }
+
+  .resume-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .resume-iframe-container {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .resume-iframe {
+    min-height: 2000px; /* Force the PDF viewer to render fully so container has scrollable height */
+    pointer-events: none; /* Bypass iframe gesture locking; lets mobile swiping scroll the parent container */
+  }
+}
+
+@media (max-width: 480px) {
+  .resume-modal-content {
+    height: 95vh;
+    max-height: 95vh;
+    border-radius: 8px;
+  }
+
+  .resume-close-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 1.15rem;
+  }
+
+  .resume-title {
+    font-size: 1.25rem;
+  }
+
+  .resume-subtitle {
+    font-size: 0.8rem;
+  }
+}
