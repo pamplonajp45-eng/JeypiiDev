@@ -112,3 +112,36 @@ button:focus-visible {
     background-color: #51587b;
   }
 }
+
+/* ── Click Glow Effect ─────────────────────────────────── */
+.click-glow {
+  position: fixed;
+  pointer-events: none;
+  z-index: 99999;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 216, 104, 0.35) 0%,
+    rgba(255, 216, 104, 0.12) 30%,
+    rgba(230, 185, 61, 0.04) 60%,
+    transparent 70%
+  );
+  transform: translate(-50%, -50%) scale(0);
+  animation: clickGlowPulse 0.8s ease-out forwards;
+}
+
+@keyframes clickGlowPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2.5);
+    opacity: 0;
+  }
+}

@@ -1,6 +1,12 @@
 import { useState } from "react";
 import "./Home.css";
-import { FaGithub, FaFacebook, FaInstagram, FaArrowDown } from "react-icons/fa";
+import {
+  FaGithub,
+  FaFacebook,
+  FaInstagram,
+  FaArrowDown,
+  FaLinkedin,
+} from "react-icons/fa";
 import Resume from "./Resume";
 
 const Home = () => {
@@ -98,6 +104,15 @@ const Home = () => {
                 className="social-icon"
               >
                 <FaInstagram />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/pamplona-jordan-o-627445332"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Linked In"
+                className="social-icon"
+              >
+                <FaLinkedin />
               </a>
             </div>
           </div>

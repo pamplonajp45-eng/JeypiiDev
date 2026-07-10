@@ -546,5 +546,16 @@
 
   .rpg-grid {
     max-height: 260px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+
+  .rpg-slot .rpg-slot-icon {
+    font-size: 18px;
+  }
+
+  .rpg-slot .rpg-slot-icon img {
+    max-width: 26px;
+    max-height: 26px;
   }
 }

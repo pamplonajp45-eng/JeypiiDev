@@ -1,5 +1,6 @@
 import "./Experience.css";
 import { useState } from "react";
+import GitHubContributions from "./GitHubContributions";
 
 export default function Experience() {
   const [loadedIds, setLoadedIds] = useState(new Set());
@@ -151,6 +152,8 @@ export default function Experience() {
           ))}
         </div>
       </div>
+
+      <GitHubContributions />
 
       {noLinkProject && (
         <div

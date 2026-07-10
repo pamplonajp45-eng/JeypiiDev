@@ -1,0 +1,427 @@
+/* ── GitHub Section (under Experience) ──────────────────── */
+.github-section {
+  width: 100%;
+  overflow: hidden;
+  padding: 5rem 2rem;
+  position: relative;
+  font-family: "VT323", monospace;
+  background:
+    radial-gradient(ellipse at bottom, rgba(0, 0, 0, 0.25), transparent 60%),
+    repeating-linear-gradient(
+      90deg,
+      #2a1a0e 0px,
+      #2a1a0e 18px,
+      #3d2714 18px,
+      #3d2714 20px
+    ),
+    linear-gradient(180deg, #3d2714, #1a0f07);
+  border-top: 3px solid rgba(230, 185, 61, 0.3);
+  border-bottom: 3px solid rgba(230, 185, 61, 0.3);
+  box-shadow:
+    inset 0 10px 20px -10px rgba(0, 0, 0, 0.6),
+    inset 0 -10px 20px -10px rgba(0, 0, 0, 0.6);
+}
+
+.github-container {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.github-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.github-title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #ffd868;
+  margin: 0 0 1rem 0;
+  letter-spacing: 2px;
+  text-shadow:
+    0 0 8px rgba(255, 216, 104, 0.5),
+    2px 2px 0 rgba(0, 0, 0, 0.6);
+  font-family: "VT323", monospace;
+}
+
+.github-subtitle {
+  font-size: 1.125rem;
+  color: #c9b287;
+  margin: 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+/* ── Year Selector ─────────────────────────────────────── */
+.github-year-selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.github-year-label {
+  font-family: "VT323", monospace;
+  font-size: 1.1rem;
+  color: #c9b287;
+}
+
+.github-year-dropdown {
+  font-family: "VT323", monospace;
+  font-size: 1.1rem;
+  color: #ffd868;
+  background: linear-gradient(
+    180deg,
+    rgba(74, 47, 24, 0.92),
+    rgba(36, 21, 9, 0.95)
+  );
+  border: 2px solid #e6b93d;
+  border-radius: 6px;
+  padding: 0.3rem 1.5rem 0.3rem 0.75rem;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='%23e6b93d'%3E%3Cpath d='M0 0l5 6 5-6z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 10px 6px;
+  min-width: 90px;
+  text-align: center;
+}
+
+.github-year-dropdown:hover {
+  border-color: #ffd868;
+}
+
+.github-year-dropdown:focus {
+  box-shadow: 0 0 8px rgba(230, 185, 61, 0.4);
+}
+
+.github-year-dropdown option {
+  background: #241509;
+  color: #ffd868;
+}
+
+/* ── Empty year state ──────────────────────────────────── */
+.github-empty-year {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+.github-empty-year p {
+  color: #a89470;
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+/* ── Error State ───────────────────────────────────────── */
+.github-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  color: #c9b287;
+  font-size: 1.2rem;
+}
+
+.github-error-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ff5555;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #ff5555;
+  animation: pulseDot 1.5s infinite;
+}
+
+@keyframes pulseDot {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+}
+
+/* ── Loading State ─────────────────────────────────────── */
+.github-loading {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 0;
+}
+
+.github-loading-pulse {
+  width: 60px;
+  height: 60px;
+  border: 3px solid rgba(230, 185, 61, 0.2);
+  border-top-color: #e6b93d;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ── Wrapper (bigger) ──────────────────────────────────── */
+.github-graph-wrapper--big {
+  background: linear-gradient(
+    180deg,
+    rgba(74, 47, 24, 0.92),
+    rgba(36, 21, 9, 0.95)
+  );
+  border: 2px solid #8a6a24;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.6),
+    inset 0 0 15px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.github-graph-wrapper--big::before {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border: 1px solid rgba(230, 185, 61, 0.2);
+  border-radius: 6px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.github-graph-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(230, 185, 61, 0.2);
+  color: #ffd868;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.github-graph-body {
+  padding: 1.5rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ── Weeks container ───────────────────────────────────── */
+.github-weeks-row {
+  display: flex;
+  gap: 4px;
+}
+
+/* Individual week column */
+.github-week {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* ── Cells (bigger) ────────────────────────────────────── */
+.github-cell {
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  position: relative;
+}
+
+.github-cell:hover {
+  outline: 2px solid rgba(255, 255, 255, 0.6);
+  outline-offset: -1px;
+  transform: scale(1.5);
+  z-index: 2;
+}
+
+.github-cell--empty {
+  background: transparent;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* ── Legend ─────────────────────────────────────────────── */
+.github-legend {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  margin-top: 1rem;
+  padding-right: 0.25rem;
+}
+
+.github-legend-label {
+  font-size: 0.7rem;
+  color: #a89470;
+  margin: 0 4px;
+}
+
+.github-legend-swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ── Tooltip ───────────────────────────────────────────── */
+.github-tooltip {
+  position: fixed;
+  z-index: 99999;
+  transform: translate(-50%, -100%);
+  background: #1c1c1c;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+}
+
+.github-tooltip-count {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.github-tooltip-date {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.7rem;
+  color: #aaa;
+}
+
+/* ── Fallback image graph ──────────────────────────────── */
+.github-contribution-graph {
+  width: 100%;
+  min-width: 600px;
+  height: auto;
+  display: block;
+  image-rendering: pixelated;
+}
+
+/* ── Profile Link ──────────────────────────────────────── */
+.github-profile-link {
+  text-align: center;
+}
+
+.github-profile-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: "VT323", monospace;
+  font-size: 1.15rem;
+  color: #ffd868;
+  background: linear-gradient(
+    180deg,
+    rgba(74, 47, 24, 0.92),
+    rgba(36, 21, 9, 0.95)
+  );
+  border: 2px solid #e6b93d;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 0 #7a5418;
+  position: relative;
+}
+
+.github-profile-btn:hover {
+  background: rgba(122, 84, 24, 0.7);
+  border-color: #ffd868;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 #7a5418;
+}
+
+.github-profile-btn:active {
+  transform: translateY(4px);
+  box-shadow: none;
+}
+
+/* ── Responsive ────────────────────────────────────────── */
+@media (max-width: 968px) {
+  .github-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .github-title {
+    font-size: 2.25rem;
+  }
+
+  .github-cell {
+    width: 15px;
+    height: 15px;
+  }
+
+  .github-week {
+    gap: 3px;
+  }
+
+  .github-weeks-row {
+    gap: 3px;
+  }
+}
+
+@media (max-width: 640px) {
+  .github-section {
+    padding: 3rem 1rem;
+  }
+
+  .github-title {
+    font-size: 2rem;
+  }
+
+  .github-subtitle {
+    font-size: 1rem;
+  }
+
+  .github-header {
+    margin-bottom: 2rem;
+  }
+
+  .github-graph-body {
+    padding: 0.75rem;
+  }
+
+  .github-cell {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+  }
+
+  .github-week {
+    gap: 3px;
+  }
+
+  .github-weeks-row {
+    gap: 3px;
+  }
+
+  .github-legend-swatch {
+    width: 11px;
+    height: 11px;
+  }
+}
