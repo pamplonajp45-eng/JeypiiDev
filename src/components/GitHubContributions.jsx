@@ -3,6 +3,10 @@ import "./GitHubContributions.css";
 
 const GITHUB_USERNAME = "pamplonajp45-eng";
 
+// Helper to generate cache-busted fallback image URL
+const getFallbackImageUrl = () =>
+  `https://ghchart.rshah.org/3fb950/${GITHUB_USERNAME}?t=${Date.now()}`;
+
 const GREEN_SCALE = [
   { level: 0, color: "#161b22", label: "No contributions" },
   { level: 1, color: "#0e4429", label: "1–3 contributions" },
@@ -29,9 +33,16 @@ function formatDate(dateStr) {
   });
 }
 
+function addCacheBuster(url) {
+  const separator = url.includes("?") ? "&" : "?";
+  return `${url}${separator}_=${Date.now()}`;
+}
+
 async function fetchYearContributions(year) {
   const res = await fetch(
-    `https://github-contributions-api.jogruber.de/v4/${GITHUB_USERNAME}?y=${year}`,
+    addCacheBuster(
+      `https://github-contributions-api.jogruber.de/v4/${GITHUB_USERNAME}?y=${year}`,
+    ),
   );
   if (!res.ok) throw new Error("API not available");
   return res.json();
@@ -46,6 +57,9 @@ export default function GitHubContributions() {
   const [tooltip, setTooltip] = useState(null);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [fallbackImageUrl, setFallbackImageUrl] = useState(
+    getFallbackImageUrl(),
+  );
 
   // Fetch all available years on mount
   useEffect(() => {
@@ -90,6 +104,11 @@ export default function GitHubContributions() {
     }
 
     fetchAllYears();
+  }, []);
+
+  // Refresh fallback image URL on mount to bust cache
+  useEffect(() => {
+    setFallbackImageUrl(getFallbackImageUrl());
   }, []);
 
   const processContribs = useCallback((contribs) => {
@@ -199,7 +218,7 @@ export default function GitHubContributions() {
             </div>
             <div className="github-graph-body">
               <img
-                src={`https://ghchart.rshah.org/3fb950/${GITHUB_USERNAME}`}
+                src={fallbackImageUrl}
                 alt={`${GITHUB_USERNAME}'s GitHub contribution graph`}
                 className="github-contribution-graph"
                 loading="lazy"

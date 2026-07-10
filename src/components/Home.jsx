@@ -35,7 +35,7 @@ const Home = () => {
             <p className="home-description">
               I don't just build websites and apps that make people go,{" "}
               <i>&ldquo;Wait — how'd they do that?&rdquo;</i> I craft digital
-              experiences that stick. I'm a{" "}
+              experiences that stick. I'm an aspiring{" "}
               <span className="highlight">full-stack developer</span> with a
               passion for clean code, seamless interactions, and making the
               impossible <span className="highlight">feel effortless.</span>
