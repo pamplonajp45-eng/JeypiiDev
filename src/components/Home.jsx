@@ -37,8 +37,8 @@ const Home = () => {
               <i>&ldquo;Wait — how'd they do that?&rdquo;</i> I craft digital
               experiences that stick. I'm an aspiring{" "}
               <span className="highlight">full-stack developer</span> with a
-              passion for clean code, seamless interactions, and making the
-              impossible <span className="highlight">feel effortless.</span>
+              passion in learning clean code, seamless interactions, and making
+              the impossible <span className="highlight">feel effortless.</span>
             </p>
 
             {/* CTA Buttons */}
