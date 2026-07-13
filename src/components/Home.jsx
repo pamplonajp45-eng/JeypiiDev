@@ -8,6 +8,7 @@ import {
   FaLinkedin,
 } from "react-icons/fa";
 import Resume from "./Resume";
+import codeLogo from "./../assets/code_logo.svg";
 
 const Home = () => {
   const [isResumeOpen, setIsResumeOpen] = useState(false);
@@ -105,14 +106,28 @@ const Home = () => {
               >
                 <FaInstagram />
               </a>
+
               <a
                 href="https://www.linkedin.com/in/pamplona-jordan-o-627445332"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Linked In"
-                className="social-icon"
+                className="social-icon social-icon-linkedin"
               >
                 <FaLinkedin />
+              </a>
+              <a
+                href="https://www.codebility.tech/profiles/4cf944a5-266b-417e-aae4-d3e28975f272"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Codebility Profile"
+                className="codebility-icon"
+              >
+                <img
+                  src={codeLogo}
+                  alt="Codebility"
+                  className="codebility-logo"
+                />
               </a>
             </div>
           </div>
