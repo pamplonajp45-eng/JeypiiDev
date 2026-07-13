@@ -5,6 +5,9 @@ import Experience from "./components/Experience";
 import "./App.css";
 import Footer from "./components/Footer";
 import ClickGlow from "./components/ClickGlow";
+import SmoothScroll from "./components/SmoothScroll";
+import { ThemeProvider } from "./context/ThemeContext";
+import "./styles/viking-toggle.css";
 
 /**
  * Root component for the portfolio single‑page app.
@@ -12,8 +15,9 @@ import ClickGlow from "./components/ClickGlow";
  */
 function App() {
   return (
-    <>
+    <ThemeProvider>
       <ClickGlow />
+      <SmoothScroll />
       <Navbar />
       <main>
         <Home />
@@ -21,7 +25,7 @@ function App() {
         <Experience />
       </main>
       <Footer />
-    </>
+    </ThemeProvider>
   );
 }
 

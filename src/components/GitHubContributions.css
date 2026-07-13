@@ -9,17 +9,12 @@
     radial-gradient(ellipse at bottom, rgba(0, 0, 0, 0.25), transparent 60%),
     repeating-linear-gradient(
       90deg,
-      #2a1a0e 0px,
-      #2a1a0e 18px,
-      #3d2714 18px,
-      #3d2714 20px
+      var(--bg-wood-mid) 0px,
+      var(--bg-wood-mid) 18px,
+      var(--bg-wood-light) 18px,
+      var(--bg-wood-light) 20px
     ),
-    linear-gradient(180deg, #3d2714, #1a0f07);
-  border-top: 3px solid rgba(230, 185, 61, 0.3);
-  border-bottom: 3px solid rgba(230, 185, 61, 0.3);
-  box-shadow:
-    inset 0 10px 20px -10px rgba(0, 0, 0, 0.6),
-    inset 0 -10px 20px -10px rgba(0, 0, 0, 0.6);
+    linear-gradient(180deg, var(--bg-wood-mid), var(--bg-wood-dark));
 }
 
 .github-container {
@@ -36,18 +31,18 @@
 .github-title {
   font-size: 2.75rem;
   font-weight: 700;
-  color: #ffd868;
+  color: var(--text-gold);
   margin: 0 0 1rem 0;
   letter-spacing: 2px;
   text-shadow:
-    0 0 8px rgba(255, 216, 104, 0.5),
+    0 0 8px var(--shadow-gold-glow),
     2px 2px 0 rgba(0, 0, 0, 0.6);
   font-family: "VT323", monospace;
 }
 
 .github-subtitle {
   font-size: 1.125rem;
-  color: #c9b287;
+  color: var(--text-parchment-dim);
   margin: 0;
   max-width: 600px;
   margin-left: auto;
@@ -67,19 +62,15 @@
 .github-year-label {
   font-family: "VT323", monospace;
   font-size: 1.1rem;
-  color: #c9b287;
+  color: var(--text-parchment-dim);
 }
 
 .github-year-dropdown {
   font-family: "VT323", monospace;
   font-size: 1.1rem;
-  color: #ffd868;
-  background: linear-gradient(
-    180deg,
-    rgba(74, 47, 24, 0.92),
-    rgba(36, 21, 9, 0.95)
-  );
-  border: 2px solid #e6b93d;
+  color: var(--text-github-dropdown);
+  background: var(--bg-github-dropdown);
+  border: 2px solid var(--border-gold);
   border-radius: 6px;
   padding: 0.3rem 1.5rem 0.3rem 0.75rem;
   cursor: pointer;
@@ -88,7 +79,7 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='%23e6b93d'%3E%3Cpath d='M0 0l5 6 5-6z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='%238a6a24'%3E%3Cpath d='M0 0l5 6 5-6z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 0.5rem center;
   background-size: 10px 6px;
@@ -97,16 +88,16 @@
 }
 
 .github-year-dropdown:hover {
-  border-color: #ffd868;
+  border-color: var(--border-gold-bright);
 }
 
 .github-year-dropdown:focus {
-  box-shadow: 0 0 8px rgba(230, 185, 61, 0.4);
+  box-shadow: 0 0 8px var(--shadow-gold);
 }
 
 .github-year-dropdown option {
-  background: #241509;
-  color: #ffd868;
+  background: var(--bg-wood-dark);
+  color: var(--text-github-dropdown);
 }
 
 /* ── Empty year state ──────────────────────────────────── */
@@ -117,7 +108,7 @@
 }
 
 .github-empty-year p {
-  color: #a89470;
+  color: var(--text-muted);
   font-size: 1.1rem;
   font-style: italic;
 }
@@ -129,7 +120,7 @@
   align-items: center;
   gap: 1rem;
   padding: 2rem;
-  color: #c9b287;
+  color: var(--text-parchment-dim);
   font-size: 1.2rem;
 }
 
@@ -167,8 +158,8 @@
 .github-loading-pulse {
   width: 60px;
   height: 60px;
-  border: 3px solid rgba(230, 185, 61, 0.2);
-  border-top-color: #e6b93d;
+  border: 3px solid var(--border-gold-faint);
+  border-top-color: var(--border-gold);
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }
@@ -181,12 +172,8 @@
 
 /* ── Wrapper (bigger) ──────────────────────────────────── */
 .github-graph-wrapper--big {
-  background: linear-gradient(
-    180deg,
-    rgba(74, 47, 24, 0.92),
-    rgba(36, 21, 9, 0.95)
-  );
-  border: 2px solid #8a6a24;
+  background: var(--bg-github-panel);
+  border: 2px solid var(--border-github-panel);
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 2rem;
@@ -200,7 +187,7 @@
   content: "";
   position: absolute;
   inset: 4px;
-  border: 1px solid rgba(230, 185, 61, 0.2);
+  border: 1px solid var(--border-github-graph);
   border-radius: 6px;
   pointer-events: none;
   z-index: 1;
@@ -211,8 +198,8 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 1rem;
-  border-bottom: 1px solid rgba(230, 185, 61, 0.2);
-  color: #ffd868;
+  border-bottom: 1px solid var(--border-github-graph);
+  color: var(--text-gold);
   font-size: 1rem;
   letter-spacing: 1px;
 }
@@ -271,7 +258,7 @@
 
 .github-legend-label {
   font-size: 0.7rem;
-  color: #a89470;
+  color: var(--text-muted);
   margin: 0 4px;
 }
 
@@ -287,7 +274,7 @@
   position: fixed;
   z-index: 99999;
   transform: translate(-50%, -100%);
-  background: #1c1c1c;
+  background: var(--bg-github-tooltip);
   border: 1px solid #444;
   border-radius: 6px;
   padding: 0.5rem 0.75rem;
@@ -334,26 +321,22 @@
   gap: 0.6rem;
   font-family: "VT323", monospace;
   font-size: 1.15rem;
-  color: #ffd868;
-  background: linear-gradient(
-    180deg,
-    rgba(74, 47, 24, 0.92),
-    rgba(36, 21, 9, 0.95)
-  );
-  border: 2px solid #e6b93d;
+  color: var(--text-gold);
+  background: var(--bg-panel);
+  border: 2px solid var(--border-gold);
   padding: 0.6rem 1.5rem;
   border-radius: 8px;
   text-decoration: none;
   transition: all 0.25s ease;
-  box-shadow: 0 4px 0 #7a5418;
+  box-shadow: 0 4px 0 var(--border-gold-dim);
   position: relative;
 }
 
 .github-profile-btn:hover {
-  background: rgba(122, 84, 24, 0.7);
-  border-color: #ffd868;
+  background: var(--bg-panel-hover);
+  border-color: var(--border-gold-bright);
   transform: translateY(-2px);
-  box-shadow: 0 6px 0 #7a5418;
+  box-shadow: 0 6px 0 var(--border-gold-dim);
 }
 
 .github-profile-btn:active {

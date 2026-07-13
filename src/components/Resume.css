@@ -4,7 +4,7 @@
 .resume-modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(10, 6, 3, 0.88);
+  background: var(--bg-overlay);
   backdrop-filter: blur(6px);
   z-index: 10000;
   display: flex;
@@ -34,16 +34,16 @@
     radial-gradient(ellipse at top, rgba(0, 0, 0, 0.15), transparent 60%),
     repeating-linear-gradient(
       90deg,
-      #3d2714 0px,
-      #3d2714 18px,
-      #5a3a1e 18px,
-      #5a3a1e 20px
+      var(--bg-wood-mid) 0px,
+      var(--bg-wood-mid) 18px,
+      var(--bg-wood-light) 18px,
+      var(--bg-wood-light) 20px
     ),
-    linear-gradient(180deg, #241509, #3d2714);
-  border: 3px solid #e6b93d;
+    linear-gradient(180deg, var(--bg-wood-dark), var(--bg-wood-mid));
+  border: 3px solid var(--border-gold);
   border-radius: 12px;
   box-shadow:
-    0 0 40px rgba(230, 185, 61, 0.25),
+    0 0 40px var(--shadow-overlay),
     0 25px 50px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
@@ -70,9 +70,9 @@
   width: 40px;
   height: 40px;
   background: rgba(36, 21, 9, 0.9);
-  border: 2px solid #e6b93d;
+  border: 2px solid var(--border-gold);
   border-radius: 8px;
-  color: #c9b287;
+  color: var(--text-parchment-dim);
   font-size: 1.6rem;
   font-family: "VT323", monospace;
   cursor: pointer;
@@ -85,16 +85,16 @@
 
 .resume-close-btn:hover {
   background: rgba(122, 84, 24, 0.55);
-  color: #ffd868;
-  border-color: #ffd868;
+  color: var(--text-gold);
+  border-color: var(--border-gold-bright);
   transform: scale(1.1);
 }
 
 /* ── Resume Header ─────────────────────────────────────── */
 .resume-header {
   padding: 1.25rem 1.5rem;
-  border-bottom: 2px solid rgba(230, 185, 61, 0.35);
-  background: rgba(74, 47, 24, 0.92);
+  border-bottom: 2px solid var(--border-gold-fainter);
+  background: var(--bg-panel);
   flex-shrink: 0;
   display: flex;
   justify-content: space-between;
@@ -107,9 +107,9 @@
   font-family: "VT323", monospace;
   font-size: clamp(1.8rem, 4vw, 2.4rem);
   font-weight: 700;
-  color: #ffd868;
+  color: var(--text-gold);
   text-shadow:
-    0 0 8px rgba(255, 216, 104, 0.5),
+    0 0 8px var(--shadow-gold-glow),
     2px 2px 0 rgba(0, 0, 0, 0.6);
   margin: 0;
   line-height: 1.2;
@@ -118,7 +118,7 @@
 .resume-subtitle {
   font-family: "VT323", monospace;
   font-size: 1.1rem;
-  color: #c9b287;
+  color: var(--text-parchment-dim);
   margin: 0.35rem 0 0;
 }
 
@@ -126,9 +126,9 @@
 .resume-action-btn {
   font-family: "VT323", monospace;
   font-size: 1.1rem;
-  color: #ffd868;
+  color: var(--text-gold);
   background: rgba(36, 21, 9, 0.9);
-  border: 2px solid #e6b93d;
+  border: 2px solid var(--border-gold);
   padding: 0.5rem 1rem;
   border-radius: 6px;
   text-decoration: none;
@@ -141,8 +141,8 @@
 
 .resume-action-btn:hover {
   background: rgba(122, 84, 24, 0.55);
-  color: #ffd868;
-  border-color: #ffd868;
+  color: var(--text-gold);
+  border-color: var(--border-gold-bright);
   transform: scale(1.05);
 }
 
@@ -151,7 +151,7 @@
   width: 100%;
   flex: 1;
   overflow: auto;
-  background: #fff;
+  background: var(--bg-iframe);
   display: flex;
   flex-direction: column;
   -webkit-overflow-scrolling: touch;
@@ -214,14 +214,14 @@
   .resume-subtitle {
     font-size: 0.9rem;
   }
-  
+
   .resume-iframe-container {
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
 
   .resume-iframe {
-    min-height: 2000px; /* Force the PDF viewer to render fully so container has scrollable height */
+    min-height: 2000px; /* Force the PDF viewer to render fully so container has scrollable content */
     pointer-events: none; /* Bypass iframe gesture locking; lets mobile swiping scroll the parent container */
   }
 }

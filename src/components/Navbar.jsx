@@ -1,12 +1,17 @@
+import { useState } from "react";
 import "./Navbar.css";
+import ThemeToggle from "./ThemeToggle";
 
 /**
  * Navbar component – fixed at the top of the page.
- * Clicking a link scrolls smoothly to the corresponding section.
+ * Desktop: links + toggle inline. Mobile: hamburger toggle + slide-out menu.
  */
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const handleClick = (e, id) => {
     e.preventDefault();
+    setMenuOpen(false);
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -16,7 +21,9 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-title">JeypiiDev</div>
-      <ul className="nav-list">
+
+      {/* Nav links + toggle (desktop) */}
+      <ul className={`nav-list ${menuOpen ? "is-open" : ""}`}>
         <li>
           <a href="#home" onClick={(e) => handleClick(e, "home")}>
             Home
@@ -37,7 +44,32 @@ const Navbar = () => {
             Contact Me
           </a>
         </li>
+        <li className="nav-toggle-desktop">
+          <ThemeToggle />
+        </li>
       </ul>
+
+      {/* Right side: toggle + hamburger (both on mobile, toggle hidden on desktop) */}
+      <div className="navbar-right">
+        <div className="nav-toggle-mobile">
+          <ThemeToggle />
+        </div>
+        <button
+          className={`hamburger ${menuOpen ? "is-open" : ""}`}
+          onClick={() => setMenuOpen((prev) => !prev)}
+          aria-label="Toggle navigation menu"
+          aria-expanded={menuOpen}
+        >
+          <span className="hamburger-line" />
+          <span className="hamburger-line" />
+          <span className="hamburger-line" />
+        </button>
+      </div>
+
+      {/* Backdrop for mobile menu */}
+      {menuOpen && (
+        <div className="nav-backdrop" onClick={() => setMenuOpen(false)} />
+      )}
     </nav>
   );
 };

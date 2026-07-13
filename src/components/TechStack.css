@@ -2,16 +2,16 @@
 
 /* ===================== ROOT VARIABLES ===================== */
 .rpg-section {
-  --wood-dark: #241509;
-  --wood-mid: #3d2714;
-  --wood-light: #5a3a1e;
-  --wood-plank: #4a2f18;
-  --parchment: #e8d5ac;
-  --parchment-dim: #c9b287;
-  --gold: #e6b93d;
-  --gold-bright: #ffd868;
-  --gold-dim: #8a6a24;
-  --shadow-deep: rgba(0, 0, 0, 0.65);
+  --wood-dark: var(--bg-wood-dark);
+  --wood-mid: var(--bg-wood-mid);
+  --wood-light: var(--bg-wood-light);
+  --wood-plank: var(--bg-wood-plank);
+  --parchment: var(--text-parchment);
+  --parchment-dim: var(--text-parchment-dim);
+  --gold: var(--border-gold);
+  --gold-bright: var(--text-gold);
+  --gold-dim: var(--border-gold-dim);
+  --shadow-deep: var(--shadow-deep);
 
   --rarity-common: #9aa0a6;
   --rarity-common-glow: rgba(154, 160, 166, 0.55);
@@ -89,11 +89,7 @@
 .rpg-center,
 .rpg-details {
   position: relative;
-  background: linear-gradient(
-    180deg,
-    rgba(74, 47, 24, 0.92),
-    rgba(36, 21, 9, 0.95)
-  );
+  background: var(--bg-panel);
   border: 3px solid var(--gold-dim);
   box-shadow:
     0 0 0 1px rgba(0, 0, 0, 0.6),
@@ -111,7 +107,7 @@
   content: "";
   position: absolute;
   inset: 6px;
-  border: 1px solid rgba(230, 185, 61, 0.25);
+  border: 1px solid var(--border-gold-faint);
   border-radius: 6px;
   pointer-events: none;
 }
@@ -132,7 +128,7 @@
   font-family: "Press Start 2P", monospace;
   color: var(--gold-bright);
   text-shadow:
-    0 0 8px rgba(255, 216, 104, 0.5),
+    0 0 8px var(--shadow-gold-glow),
     2px 2px 0 rgba(0, 0, 0, 0.6);
   font-size: 9px;
   margin: 0 0 6px;
@@ -156,12 +152,8 @@
   width: 100%;
   padding: 7px 8px;
   font-size: 12px;
-  background: linear-gradient(
-    180deg,
-    rgba(90, 58, 30, 0.55),
-    rgba(36, 21, 9, 0.55)
-  );
-  border: 2px solid rgba(230, 185, 61, 0.25);
+  background: var(--bg-panel-dim);
+  border: 2px solid var(--border-gold-faint);
   border-radius: 6px;
   color: var(--parchment-dim);
   cursor: pointer;
@@ -183,14 +175,10 @@
   color: var(--gold-bright);
   border-color: var(--gold);
   box-shadow:
-    0 0 10px rgba(230, 185, 61, 0.55),
-    0 0 22px rgba(230, 185, 61, 0.3),
+    0 0 10px var(--shadow-gold),
+    0 0 22px var(--shadow-gold-soft),
     inset 0 0 10px rgba(230, 185, 61, 0.15);
-  background: linear-gradient(
-    180deg,
-    rgba(122, 84, 24, 0.55),
-    rgba(36, 21, 9, 0.65)
-  );
+  background: var(--bg-panel-hover);
 }
 
 .rpg-nav-icon {
@@ -202,7 +190,7 @@
   font-size: 12px;
   border-radius: 5px;
   background: rgba(0, 0, 0, 0.35);
-  border: 1px solid rgba(230, 185, 61, 0.2);
+  border: 1px solid var(--border-gold-faint);
   flex-shrink: 0;
 }
 
@@ -224,7 +212,7 @@
   font-family: "Press Start 2P", monospace;
   color: var(--gold-bright);
   text-shadow:
-    0 0 8px rgba(255, 216, 104, 0.5),
+    0 0 8px var(--shadow-gold-glow),
     2px 2px 0 rgba(0, 0, 0, 0.6);
   font-size: 12px;
   margin: 0;
@@ -242,14 +230,14 @@
   height: 8px;
   border-radius: 4px;
   background: rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(230, 185, 61, 0.3);
+  border: 1px solid var(--border-gold-faint);
   overflow: hidden;
 }
 
 .rpg-capacity-fill {
   height: 100%;
   background: linear-gradient(90deg, var(--gold-dim), var(--gold-bright));
-  box-shadow: 0 0 8px rgba(255, 216, 104, 0.6);
+  box-shadow: 0 0 8px var(--shadow-gold-glow);
   transition: width 300ms ease;
 }
 
@@ -290,7 +278,7 @@
     rgba(0, 0, 0, 0.35),
     rgba(255, 255, 255, 0.03)
   );
-  border: 2px solid rgba(230, 185, 61, 0.18);
+  border: 2px solid var(--border-gold-faintest);
   transition:
     transform 200ms ease,
     box-shadow 300ms ease,
@@ -332,7 +320,7 @@
   top: -4px;
   right: -4px;
   font-size: 10px;
-  filter: drop-shadow(0 0 3px rgba(255, 216, 104, 0.9));
+  filter: drop-shadow(0 0 3px var(--shadow-gold-glow));
 }
 
 /* Rarity variants */
@@ -441,7 +429,7 @@
   font-family: "Press Start 2P", monospace;
   color: var(--gold-bright);
   text-shadow:
-    0 0 8px rgba(255, 216, 104, 0.5),
+    0 0 8px var(--shadow-gold-glow),
     2px 2px 0 rgba(0, 0, 0, 0.6);
   font-size: 11px;
   margin: 0 0 4px;
@@ -468,7 +456,7 @@
 
 .rpg-stars {
   color: var(--gold);
-  text-shadow: 0 0 6px rgba(255, 216, 104, 0.6);
+  text-shadow: 0 0 6px var(--shadow-gold-glow);
   letter-spacing: 2px;
 }
 
@@ -478,7 +466,7 @@
   overflow: hidden;
   vertical-align: bottom;
   color: var(--gold);
-  text-shadow: 0 0 6px rgba(255, 216, 104, 0.6);
+  text-shadow: 0 0 6px var(--shadow-gold-glow);
 }
 
 .rpg-stat-row {
@@ -486,7 +474,7 @@
   justify-content: space-between;
   padding: 5px 0;
   font-size: 14px;
-  border-bottom: 1px dashed rgba(230, 185, 61, 0.2);
+  border-bottom: 1px dashed var(--border-gold-fainter);
 }
 
 .rpg-empty-state {

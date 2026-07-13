@@ -1,0 +1,202 @@
+/* ── Dark Theme (default) ───────────────────────────────── */
+:root,
+[data-theme="dark"] {
+  /* Section backgrounds */
+  --bg-body: linear-gradient(135deg, #414359 0%, #484f69 50%, #51587b 100%);
+  --bg-wood-dark: #241509;
+  --bg-wood-mid: #3d2714;
+  --bg-wood-light: #5a3a1e;
+  --bg-wood-plank: #4a2f18;
+  --bg-panel: linear-gradient(
+    180deg,
+    rgba(74, 47, 24, 0.92),
+    rgba(36, 21, 9, 0.95)
+  );
+  --bg-panel-hover: linear-gradient(
+    180deg,
+    rgba(122, 84, 24, 0.55),
+    rgba(36, 21, 9, 0.65)
+  );
+  --bg-panel-dim: linear-gradient(
+    180deg,
+    rgba(90, 58, 30, 0.55),
+    rgba(36, 21, 9, 0.55)
+  );
+  --bg-nav: linear-gradient(
+    180deg,
+    rgba(74, 47, 24, 0.98),
+    rgba(36, 21, 9, 0.98)
+  );
+  --bg-button: #484f69;
+  --bg-button-hover: #51587b;
+  --bg-overlay: rgba(10, 6, 3, 0.88);
+  --bg-iframe: #fff;
+  --bg-modal-btn: #e6b93d;
+  --bg-modal-btn-hover: #ffd868;
+
+  /* GitHub specific */
+  --bg-github-section: linear-gradient(180deg, #3d2714, #1a0f07);
+  --bg-github-panel: linear-gradient(
+    180deg,
+    rgba(74, 47, 24, 0.92),
+    rgba(36, 21, 9, 0.95)
+  );
+  --bg-github-dropdown: linear-gradient(
+    180deg,
+    rgba(74, 47, 24, 0.92),
+    rgba(36, 21, 9, 0.95)
+  );
+  --bg-github-tooltip: #1c1c1c;
+  --border-github-panel: #8a6a24;
+  --border-github-graph: rgba(230, 185, 61, 0.2);
+  --text-github-dropdown: #ffd868;
+
+  /* Text colors */
+  --text-primary: rgba(255, 255, 255, 0.87);
+  --text-parchment: #e8d5ac;
+  --text-parchment-dim: #c9b287;
+  --text-gold: #ffd868;
+  --text-gold-dim: #e6b93d;
+  --text-muted: #a89470;
+  --text-link: #c7c7c7;
+  --text-link-hover: #ffffff;
+  --text-button: white;
+  --text-dark: #241509;
+
+  /* Border colors */
+  --border-gold: #e6b93d;
+  --border-gold-bright: #ffd868;
+  --border-gold-dim: #8a6a24;
+  --border-gold-faint: rgba(230, 185, 61, 0.25);
+  --border-gold-fainter: rgba(230, 185, 61, 0.2);
+  --border-gold-faintest: rgba(230, 185, 61, 0.18);
+
+  /* Shadow/glow colors */
+  --shadow-gold: rgba(230, 185, 61, 0.55);
+  --shadow-gold-soft: rgba(230, 185, 61, 0.3);
+  --shadow-gold-glow: rgba(255, 216, 104, 0.5);
+  --shadow-deep: rgba(0, 0, 0, 0.65);
+  --shadow-overlay: rgba(230, 185, 61, 0.2);
+
+  /* Navbar */
+  --nav-border: #8a6a24;
+  --nav-link: #c9b287;
+  --nav-link-hover: #ffd868;
+  --nav-title-glow: rgba(255, 216, 104, 0.5);
+
+  /* Footer */
+  --footer-border: #8a6a24;
+  --footer-border-top: rgba(230, 185, 61, 0.2);
+  --footer-overlay: rgba(0, 0, 0, 0.45);
+
+  /* Click Glow */
+  --click-glow: radial-gradient(
+    circle,
+    rgba(255, 216, 104, 0.35) 0%,
+    rgba(255, 216, 104, 0.12) 30%,
+    rgba(230, 185, 61, 0.04) 60%,
+    transparent 70%
+  );
+
+  /* Modal */
+  --modal-btn-shadow: #b38600;
+}
+
+/* ── Light Theme ────────────────────────────────────────── */
+[data-theme="light"] {
+  /* Section backgrounds — warm beige/sandstone wood */
+  --bg-body: linear-gradient(135deg, #f5f0e8 0%, #ede4d3 50%, #e8dcc8 100%);
+  --bg-wood-dark: #f5f0e8;
+  --bg-wood-mid: #ede4d3;
+  --bg-wood-light: #e0d4bd;
+  --bg-wood-plank: #d4c4a8;
+  --bg-panel: linear-gradient(
+    180deg,
+    rgba(245, 240, 232, 0.95),
+    rgba(237, 228, 211, 0.98)
+  );
+  --bg-panel-hover: linear-gradient(
+    180deg,
+    rgba(200, 180, 150, 0.6),
+    rgba(237, 228, 211, 0.9)
+  );
+  --bg-panel-dim: linear-gradient(
+    180deg,
+    rgba(237, 228, 211, 0.7),
+    rgba(220, 210, 190, 0.8)
+  );
+  --bg-nav: linear-gradient(
+    180deg,
+    rgba(245, 240, 232, 0.98),
+    rgba(237, 228, 211, 0.98)
+  );
+  --bg-button: #8a7a5a;
+  --bg-button-hover: #6c5f42;
+  --bg-overlay: rgba(200, 190, 170, 0.85);
+  --bg-iframe: #fff;
+  --bg-modal-btn: #8a6a24;
+  --bg-modal-btn-hover: #6c4f1a;
+
+  /* GitHub specific */
+  --bg-github-section: linear-gradient(180deg, #ede4d3, #e0d4bd);
+  --bg-github-panel: linear-gradient(
+    180deg,
+    rgba(245, 240, 232, 0.95),
+    rgba(237, 228, 211, 0.98)
+  );
+  --bg-github-dropdown: #fff;
+  --bg-github-tooltip: #3a3a3a;
+  --border-github-panel: #8a6a24;
+  --border-github-graph: rgba(138, 106, 36, 0.25);
+  --text-github-dropdown: #4a3520;
+
+  /* Text colors — dark brown for contrast on light */
+  --text-primary: #3d3020;
+  --text-parchment: #4a3a2a;
+  --text-parchment-dim: #5c4a35;
+  --text-gold: #8a6a24;
+  --text-gold-dim: #6c4f1a;
+  --text-muted: #7a6a55;
+  --text-link: #6c5f42;
+  --text-link-hover: #4a3520;
+  --text-button: white;
+  --text-dark: #ffffff;
+
+  /* Border colors — darker for visibility on light background */
+  --border-gold: #8a6a24;
+  --border-gold-bright: #6c4f1a;
+  --border-gold-dim: #8a6a24;
+  --border-gold-faint: rgba(138, 106, 36, 0.3);
+  --border-gold-fainter: rgba(138, 106, 36, 0.2);
+  --border-gold-faintest: rgba(138, 106, 36, 0.15);
+
+  /* Shadow/glow colors */
+  --shadow-gold: rgba(138, 106, 36, 0.4);
+  --shadow-gold-soft: rgba(138, 106, 36, 0.2);
+  --shadow-gold-glow: rgba(138, 106, 36, 0.35);
+  --shadow-deep: rgba(0, 0, 0, 0.15);
+  --shadow-overlay: rgba(138, 106, 36, 0.15);
+
+  /* Navbar */
+  --nav-border: #8a6a24;
+  --nav-link: #5c4a35;
+  --nav-link-hover: #8a6a24;
+  --nav-title-glow: rgba(138, 106, 36, 0.4);
+
+  /* Footer */
+  --footer-border: #8a6a24;
+  --footer-border-top: rgba(138, 106, 36, 0.25);
+  --footer-overlay: rgba(255, 255, 255, 0.25);
+
+  /* Click Glow */
+  --click-glow: radial-gradient(
+    circle,
+    rgba(138, 106, 36, 0.3) 0%,
+    rgba(138, 106, 36, 0.1) 30%,
+    rgba(138, 106, 36, 0.04) 60%,
+    transparent 70%
+  );
+
+  /* Modal */
+  --modal-btn-shadow: rgba(0, 0, 0, 0.2);
+}
