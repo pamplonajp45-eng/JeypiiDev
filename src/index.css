@@ -1,5 +1,6 @@
 /* ── Theme variables ──────────────────────────────────── */
 @import "./styles/themes.css";
+@import "./styles/ornamental-borders.css";
 
 /* ── Universal Box Reset ──────────────────────────────── */
 *,

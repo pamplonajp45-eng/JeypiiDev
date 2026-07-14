@@ -1,0 +1,127 @@
+/* ============================================================
+   Classical Ornamental Borders
+   Pure CSS (mask-image technique) — fully recolorable via
+   the --ornament-color custom property. No images, no fonts,
+   just inline SVG masks tiled with mask-repeat.
+   ============================================================ */
+
+:root {
+  --ornament-color: var(--border-gold, #8b5e50); /* ties into theme */
+}
+
+.ornament {
+  display: block;
+  width: 100%;
+  background-color: var(--ornament-color);
+  -webkit-mask-repeat: repeat-x;
+  mask-repeat: repeat-x;
+  -webkit-mask-position: left center;
+  mask-position: left center;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* 1. Fleur band — stylised fleur-de-lis repeated in a row */
+.ornament--fleur {
+  height: 18px;
+  -webkit-mask-size: 22px 18px;
+  mask-size: 22px 18px;
+  -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 46 40'><path d='M23,2 Q29,14 25,26 L21,26 Q17,14 23,2 Z'/><path d='M17,26 Q7,18 11,8 Q17,16 17,26 Z'/><path d='M29,26 Q39,18 35,8 Q29,16 29,26 Z'/><rect x='9' y='26' width='28' height='3' rx='1.2'/><circle cx='23' cy='33' r='2.1'/></svg>");
+  mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 46 40'><path d='M23,2 Q29,14 25,26 L21,26 Q17,14 23,2 Z'/><path d='M17,26 Q7,18 11,8 Q17,16 17,26 Z'/><path d='M29,26 Q39,18 35,8 Q29,16 29,26 Z'/><rect x='9' y='26' width='28' height='3' rx='1.2'/><circle cx='23' cy='33' r='2.1'/></svg>");
+}
+
+/* 2. Hairline fret — a fine dotted divider */
+.ornament--hairline {
+  height: 2px;
+  -webkit-mask-size: 6px 2px;
+  mask-size: 6px 2px;
+  -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 4'><circle cx='2' cy='2' r='1.1'/></svg>");
+  mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 4'><circle cx='2' cy='2' r='1.1'/></svg>");
+}
+
+/* Stack a band with its hairline, like the reference sheet */
+.ornament-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* ── Section divider (full-width spacer between sections) ── */
+.section-divider {
+  width: 100%;
+  padding: 6px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  /* Same wood background as all sections — prevents body gradient bleed-through */
+  background:
+    radial-gradient(ellipse at top, rgba(0, 0, 0, 0.15), transparent 60%),
+    repeating-linear-gradient(
+      90deg,
+      var(--bg-wood-mid) 0px,
+      var(--bg-wood-mid) 18px,
+      var(--bg-wood-light) 18px,
+      var(--bg-wood-light) 20px
+    ),
+    linear-gradient(180deg, var(--bg-wood-dark), var(--bg-wood-mid));
+}
+
+.section-divider .ornament {
+  width: 100%;
+  max-width: 100%;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.section-divider:hover .ornament {
+  opacity: 0.85;
+}
+
+/* ── Decorative heading underlines ── */
+.ornament-heading-underline {
+  width: 100%;
+  max-width: 80px;
+  margin: 4px auto 0;
+  opacity: 0.4;
+}
+
+/* ── Fade-in animation for dividers ── */
+.section-divider {
+  animation: ornamentFadeIn 0.8s ease forwards;
+  opacity: 0;
+}
+
+@keyframes ornamentFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Mobile: even smaller ── */
+@media (max-width: 768px) {
+  .ornament--fleur {
+    height: 14px;
+    -webkit-mask-size: 18px 14px;
+    mask-size: 18px 14px;
+  }
+
+  .ornament--hairline {
+    height: 1.5px;
+    -webkit-mask-size: 5px 1.5px;
+    mask-size: 5px 1.5px;
+  }
+
+  .section-divider {
+    padding: 5px 0;
+  }
+
+  .ornament-heading-underline {
+    max-width: 60px;
+  }
+}

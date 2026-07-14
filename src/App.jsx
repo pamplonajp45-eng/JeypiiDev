@@ -9,9 +9,20 @@ import SmoothScroll from "./components/SmoothScroll";
 import { ThemeProvider } from "./context/ThemeContext";
 import "./styles/viking-toggle.css";
 
+/* ── Section ornament (reusable divider component) ── */
+function SectionDivider({ variant = "quatrefoil" }) {
+  return (
+    <div className="section-divider">
+      <div className={`ornament ornament--${variant}`} />
+      <div className="ornament ornament--hairline" />
+    </div>
+  );
+}
+
 /**
  * Root component for the portfolio single‑page app.
- * Renders the fixed Navbar and each page section.
+ * Renders the fixed Navbar and each page section with
+ * ornamental dividers between them.
  */
 function App() {
   return (
@@ -21,8 +32,16 @@ function App() {
       <Navbar />
       <main>
         <Home />
+
+        <SectionDivider variant="fleur" />
+
         <TechStack />
+
+        <SectionDivider variant="fleur" />
+
         <Experience />
+
+        <SectionDivider variant="fleur" />
       </main>
       <Footer />
     </ThemeProvider>

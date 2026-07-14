@@ -92,6 +92,7 @@ export default function Experience() {
       <div className="experience-container">
         <div className="experience-header">
           <h2 className="experience-title">Things I’ve Built</h2>
+          <div className="ornament ornament--hairline ornament-heading-underline" />
           <p className="experience-subtitle">
             Projects showcasing my skills in building modern web applications.
           </p>

@@ -165,7 +165,7 @@ export default function GitHubContributions() {
   };
 
   return (
-    <section className="github-section">
+    <section id="contribution" className="github-section">
       <div className="github-container">
         <div className="github-header">
           <h2 className="github-title">CONTRIBUTION ACTIVITY</h2>

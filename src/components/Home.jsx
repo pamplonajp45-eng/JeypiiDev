@@ -44,33 +44,9 @@ const Home = () => {
 
             {/* CTA Buttons */}
             <div className="button-group">
-              <a
-                href="#experience"
-                className="btn btn-primary"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document
-                    .getElementById("experience")
-                    ?.scrollIntoView({ behavior: "smooth" });
-                }}
-              >
-                View My Work
-              </a>
-              <a
-                href="#footer"
-                className="btn btn-secondary"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document
-                    .getElementById("footer")
-                    ?.scrollIntoView({ behavior: "smooth" });
-                }}
-              >
-                Contact Me
-              </a>
               <button
                 type="button"
-                className="btn btn-secondary"
+                className="btn btn-primary"
                 onClick={() => setIsResumeOpen(true)}
               >
                 View Resume

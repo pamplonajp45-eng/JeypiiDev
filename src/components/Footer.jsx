@@ -10,9 +10,9 @@ import {
 
 export default function Footer() {
   const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=devjp35@gmail.com&su=${encodeURIComponent(
-    "Service Inquiry - JeypiiDev"
+    "Service Inquiry - JeypiiDev",
   )}&body=${encodeURIComponent(
-    "Hello JeypiiDev Team,\n\nI am interested in learning more about your services.\n\nService Interest: [Web Development / Consulting]\nProject Description: \n\nName: \nContact Number: \n\nThank you!"
+    "Hello JeypiiDev Team,\n\nI am interested in learning more about your services.\n\nService Interest: [Web Development / Consulting]\nProject Description: \n\nName: \nContact Number: \n\nThank you!",
   )}`;
 
   return (
@@ -36,7 +36,25 @@ export default function Footer() {
               <a href="#home">Home</a>
             </li>
             <li>
-              <a href="#products">Experience</a>
+              <a href="#TechStack" onClick={(e) => handleClick(e, "TechStack")}>
+                Tech Stack
+              </a>
+            </li>
+            <li>
+              <a
+                href="#experience"
+                onClick={(e) => handleClick(e, "experience")}
+              >
+                Experience
+              </a>
+            </li>
+            <li>
+              <a
+                href="#contribution"
+                onClick={(e) => handleClick(e, "experience")}
+              >
+                Github Activity
+              </a>
             </li>
           </ul>
         </div>
@@ -51,7 +69,7 @@ export default function Footer() {
             <li>
               <FaEnvelope className="footer-icon" />
               <a href={mailtoLink} target="_blank" rel="noreferrer">
-                devjp35@gmail.com
+                pamplonajp.45@gmail.com
               </a>
             </li>
             <li>

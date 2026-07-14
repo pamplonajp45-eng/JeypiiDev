@@ -114,22 +114,18 @@
 .role-pill {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
-  background: var(--bg-panel);
-  border: 2px solid var(--border-gold);
-  border-radius: 8px;
-  padding: 0.5rem 1.2rem;
-  font-size: 1rem;
+  gap: 0.2rem;
+  padding: 0.5rem 0.5rem;
+  font-size: 2rem;
   font-weight: 600;
   color: var(--text-gold);
   width: fit-content;
-  box-shadow: 0 0 10px var(--shadow-gold);
   animation: fadeSlideDown 0.7s ease 0.2s both;
 }
 
 .role-dot {
-  width: 8px;
-  height: 8px;
+  width: 2px;
+  height: 2px;
   background: var(--border-gold);
   border-radius: 50%;
   animation: blink 2s ease-in-out infinite;
@@ -381,22 +377,18 @@
 /* "Open to Work" badge */
 .image-badge {
   position: absolute;
-  bottom: -14px;
-  left: 50%;
+  bottom: 60px;
+  left: 60%;
   transform: translateX(-50%);
   z-index: 2;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: var(--bg-panel);
-  border: 2px solid var(--border-gold);
-  border-radius: 8px;
   padding: 0.45rem 1.2rem;
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--text-gold);
   white-space: nowrap;
-  box-shadow: 0 0 10px var(--shadow-gold);
 }
 
 .badge-dot {
@@ -553,9 +545,9 @@
     margin: 0 auto;
   }
 
-  /* Badge sits below image */
+  /* Badge overlaps bottom of image */
   .image-badge {
-    bottom: -18px;
+    bottom: 20px;
     font-size: 0.78rem;
     padding: 0.4rem 1rem;
   }
