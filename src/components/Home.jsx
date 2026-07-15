@@ -118,10 +118,8 @@ const Home = () => {
                 className="profile-image"
               />
               {/* Floating badge */}
-              <div className="image-badge">
-                <span className="badge-dot"></span>
-                JeypiiDev
-              </div>
+
+              <span className="badge-dot"></span>
             </div>
           </div>
         </div>

@@ -127,9 +127,6 @@
 .rpg-sidebar-title {
   font-family: "Press Start 2P", monospace;
   color: var(--gold-bright);
-  text-shadow:
-    0 0 8px var(--shadow-gold-glow),
-    2px 2px 0 rgba(0, 0, 0, 0.6);
   font-size: 9px;
   margin: 0 0 6px;
   letter-spacing: 1px;
@@ -211,9 +208,6 @@
 .rpg-center-title {
   font-family: "Press Start 2P", monospace;
   color: var(--gold-bright);
-  text-shadow:
-    0 0 8px var(--shadow-gold-glow),
-    2px 2px 0 rgba(0, 0, 0, 0.6);
   font-size: 12px;
   margin: 0;
   letter-spacing: 1px;
@@ -428,9 +422,6 @@
 .rpg-details-name h3 {
   font-family: "Press Start 2P", monospace;
   color: var(--gold-bright);
-  text-shadow:
-    0 0 8px var(--shadow-gold-glow),
-    2px 2px 0 rgba(0, 0, 0, 0.6);
   font-size: 11px;
   margin: 0 0 4px;
 }
