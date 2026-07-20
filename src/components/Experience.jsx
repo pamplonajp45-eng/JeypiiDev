@@ -69,6 +69,15 @@ export default function Experience() {
       subtitle: " A website for my brother's 3D printing business",
       image: "images/jpfusionlab.png",
       link: "https://jp-fusion-lab.vercel.app/",
+      tags: ["CRUD", "API", "SUPABASE", "Express.js", "React.js", "Node.js"],
+    },
+    {
+      id: 6,
+      title: "HankoFlow",
+      subtitle:
+        " HankoFlow simplifies your document approval process. Submit an Excel file path, generate ready-to-send email drafts, and track approvals from start to finish — no more chasing signatures through email chains.",
+      image: "images/Hanko Flow.svg",
+      link: "https://hankoflow.vercel.app/",
       tags: [
         "CRUD",
         "API",
@@ -76,6 +85,7 @@ export default function Experience() {
         "Express.js",
         "React.js",
         "Node.js",
+        "MAILTO",
       ],
     },
   ];
