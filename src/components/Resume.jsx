@@ -44,7 +44,7 @@ function Resume({ isOpen, onClose }) {
         </div>
         <div className="resume-iframe-container">
           <iframe
-            src="Pamplona_Resume_(2026).pdf"
+            src="Pamplona_Resume(2026)updated.pdf"
             title="Resume"
             className="resume-iframe"
           ></iframe>
