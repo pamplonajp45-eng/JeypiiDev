@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import TechStack from "./components/TechStack";
 import Experience from "./components/Experience";
+import GitHubContributions from "./components/GitHubContributions";
 import "./App.css";
 import Footer from "./components/Footer";
 import ClickGlow from "./components/ClickGlow";
@@ -42,6 +43,8 @@ function App() {
         <Experience />
 
         <SectionDivider variant="fleur" />
+
+        <GitHubContributions />
       </main>
       <Footer />
     </ThemeProvider>

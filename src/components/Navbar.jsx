@@ -36,7 +36,7 @@ const Navbar = () => {
         </li>
         <li>
           <a href="#experience" onClick={(e) => handleClick(e, "experience")}>
-            Exp.
+            Experience
           </a>
         </li>
         <li>

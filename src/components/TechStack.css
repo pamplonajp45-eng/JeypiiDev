@@ -41,16 +41,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background:
-    radial-gradient(ellipse at top, rgba(0, 0, 0, 0.15), transparent 60%),
-    repeating-linear-gradient(
-      90deg,
-      var(--wood-mid) 0px,
-      var(--wood-mid) 18px,
-      var(--wood-light) 18px,
-      var(--wood-light) 20px
-    ),
-    linear-gradient(180deg, var(--wood-dark), var(--wood-mid));
   background-blend-mode: normal;
   image-rendering: pixelated;
   box-sizing: border-box;

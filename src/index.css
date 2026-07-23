@@ -42,6 +42,16 @@ body {
 main {
   width: 100%;
   overflow-x: hidden;
+  background:
+    radial-gradient(ellipse at top, rgba(0, 0, 0, 0.15), transparent 60%),
+    repeating-linear-gradient(
+      90deg,
+      var(--bg-wood-mid) 0px,
+      var(--bg-wood-mid) 18px,
+      var(--bg-wood-light) 18px,
+      var(--bg-wood-light) 20px
+    ),
+    linear-gradient(180deg, var(--bg-wood-dark), var(--bg-wood-mid));
 }
 
 /* ── Base element resets ────────────────────────────── */

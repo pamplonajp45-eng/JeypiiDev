@@ -111,7 +111,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; 2025 JeypiiDev — All Rights Reserved</p>
+        <p>&copy; 2026 JeypiiDev — All Rights Reserved</p>
       </div>
     </footer>
   );

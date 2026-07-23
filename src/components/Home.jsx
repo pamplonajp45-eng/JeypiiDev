@@ -34,12 +34,12 @@ const Home = () => {
             </div>
 
             <p className="home-description">
-              I don't just build websites and apps that make people go,{" "}
-              <i>&ldquo;Wait — how'd they do that?&rdquo;</i> I craft digital
-              experiences that stick. I'm an aspiring{" "}
-              <span className="highlight">full-stack developer</span> with a
-              passion in learning clean code, seamless interactions, and making
-              the impossible <span className="highlight">feel effortless.</span>
+              I build production-ready web applications that prioritize
+              performance, usability, and scalability. As an aspiring{" "}
+              <span className="highlight">Full-Stack Developer</span>, I enjoy
+              solving real-world problems through clean code, intuitive user
+              experiences, and continuous learning. My goal is to create
+              reliable digital solutions that will make a meaningful impact.
             </p>
 
             {/* CTA Buttons */}
