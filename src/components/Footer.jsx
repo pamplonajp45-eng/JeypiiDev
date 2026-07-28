@@ -106,6 +106,17 @@ export default function Footer() {
             >
               <FaInstagram />
             </a>
+
+            <iframe
+              src="https://appbuildersph.com/embed/apps/jp-deck"
+              title="JP Deck votes on App Builders PH"
+              width="170"
+              height="50"
+              style={{ border: "none" }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              sandbox="allow-scripts allow-same-origin allow-popups"
+            ></iframe>
           </div>
         </div>
       </div>
