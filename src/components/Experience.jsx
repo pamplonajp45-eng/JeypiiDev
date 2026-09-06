@@ -71,7 +71,7 @@ export default function Experience() {
       tags: ["CRUD", "API", "SUPABASE", "Express.js", "React.js", "Node.js"],
     },
     {
-      id: 6,
+      id: 7,
       title: "HankoFlow",
       subtitle:
         " HankoFlow simplifies your document approval process. Submit an Excel file path, generate ready-to-send email drafts, and track approvals from start to finish — no more chasing signatures through email chains.",
@@ -86,6 +86,15 @@ export default function Experience() {
         "Node.js",
         "MAILTO",
       ],
+    },
+    {
+      id: 8,
+      title: "PrintLay",
+      subtitle:
+        "Bulk photo auto-cropper & print-ready sheet layout tool. Crop photos to common print sizes (incl. polaroid), arrange them on A4/letter sheets, and export print-ready PDFs — all 100% in-browser.",
+      image: "images/printlay.png",
+      link: "https://printlay.vercel.app/",
+      tags: ["React", "Vite", "Canvas", "PDF Export", "HEIC", "Local Storage"],
     },
   ];
 
